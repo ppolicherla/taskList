@@ -9,7 +9,7 @@
 		<a href="index.php">MAIN/ADD TASK</a>
 		<?php
 		include('connect.php');
-		$query="SELECT task, dueDate ORDER BY dueDate ASC";
+		$query="SELECT id, task, dueDate FROM tasks ORDER BY dueDate ASC";
 		$results=mysqli_query($conn,$query);
 		if($results->num_rows > 0)
 		{
@@ -36,7 +36,7 @@
 		mysqli_close($conn);
 		?>
 	</div>
-	
+
 </div>
 
 </body>
